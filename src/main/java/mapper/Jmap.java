@@ -140,13 +140,13 @@ public class Jmap {
      * @param srcField source field to check
      * @return boolean indicate is ignored field
      */
-    private boolean isIgnoredField(Field srcField) {
+    private boolean isIgnoredField(Object srcClass, Field srcField) {
         boolean isIgnored = true;
 
         if (srcField.isAnnotationPresent(IgnoreField.class)) {
-            if (!srcField.getAnnotation(IgnoreField.class).value()) {
-                isIgnored = false;
-            }
+            isIgnored = srcField.getAnnotation(IgnoreField.class).value();
+        } else if (srcClass.getClass().isAnnotationPresent(IgnoreField.class)) {
+            isIgnored = srcClass.getClass().getAnnotation(IgnoreField.class).value();
         }
 
         return isIgnored;
