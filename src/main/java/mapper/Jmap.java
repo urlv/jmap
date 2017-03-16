@@ -78,7 +78,7 @@ public class Jmap {
             // The destination field not exist
             isFieldExist = false;
 
-            if (!isIgnoredField(srcField)) {
+            if (!isIgnoredField(srcClass, srcField)) {
                 throw e;
             }
         }
