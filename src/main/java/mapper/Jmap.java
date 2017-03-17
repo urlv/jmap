@@ -59,7 +59,7 @@ public class Jmap {
     /**
      * Make a field mapping process
      * @param srcClass source class to read
-     * @param srcField source filed to read
+     * @param srcField source field to read
      * @param dstClass destination class to write
      * @param <T> any class as destination class
      * @throws ClassNotFoundException
@@ -91,7 +91,7 @@ public class Jmap {
     /**
      * Set the destination fill by source field
      * @param srcClass source class to read
-     * @param srcField source filed to read
+     * @param srcField source field to read
      * @param dstClass destination class to write
      * @param dstField destination field to write
      * @param <T> any class as destination class
